@@ -24,7 +24,7 @@ class DataTransformation:
 
     def get_data_transformer_object(self):
         '''
-        This function si responsible for data trnasformation
+        This function is responsible for data trnasformation
         
         '''
         try:
@@ -48,9 +48,9 @@ class DataTransformation:
             cat_pipeline=Pipeline(
 
                 steps=[
-                ("imputer",SimpleImputer(strategy="most_frequent")),
-                ("one_hot_encoder",OneHotEncoder()),
-                ("scaler",StandardScaler(with_mean=False))
+                ("imputer", SimpleImputer(strategy="most_frequent")),
+                ("one_hot_encoder", OneHotEncoder(handle_unknown="ignore")),
+                ("scaler", StandardScaler(with_mean=False))
                 ]
 
             )
