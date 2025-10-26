@@ -28,4 +28,3 @@ pip install -r requirements.txt
 Now run,
 ```bash
 python app.py
-```
